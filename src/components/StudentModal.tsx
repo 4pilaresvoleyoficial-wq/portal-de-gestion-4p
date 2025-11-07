@@ -69,7 +69,7 @@ export const StudentModal = ({ open, onOpenChange, student, onSaved }: StudentMo
       const validated = studentSchema.parse(formData);
 
       const method = student ? "PATCH" : "POST";
-      const endpoint = student ? `${API_BASE_URL}/${student.id}` : API_BASE_URL;
+      const endpoint = student ? `${API_BASE_URL}/students/${student.id}` : API_BASE_URL;
 
       console.log("Validated data:", validated);
 
